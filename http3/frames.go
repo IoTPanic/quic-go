@@ -6,8 +6,8 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/quicvarint"
+	"github.com/IoTPanic/quic-go/internal/protocol"
+	"github.com/IoTPanic/quic-go/quicvarint"
 )
 
 type frame interface{}

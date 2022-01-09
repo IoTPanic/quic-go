@@ -11,11 +11,11 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/lucas-clemente/quic-go"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/qtls"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/quicvarint"
+	"github.com/IoTPanic/quic-go"
+	"github.com/IoTPanic/quic-go/internal/protocol"
+	"github.com/IoTPanic/quic-go/internal/qtls"
+	"github.com/IoTPanic/quic-go/internal/utils"
+	"github.com/IoTPanic/quic-go/quicvarint"
 	"github.com/marten-seemann/qpack"
 )
 

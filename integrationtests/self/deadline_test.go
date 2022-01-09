@@ -7,7 +7,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/lucas-clemente/quic-go"
+	"github.com/IoTPanic/quic-go"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

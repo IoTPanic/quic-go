@@ -7,12 +7,12 @@ import (
 	"net"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/internal/ackhandler"
-	"github.com/lucas-clemente/quic-go/internal/handshake"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/qerr"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/internal/wire"
+	"github.com/IoTPanic/quic-go/internal/ackhandler"
+	"github.com/IoTPanic/quic-go/internal/handshake"
+	"github.com/IoTPanic/quic-go/internal/protocol"
+	"github.com/IoTPanic/quic-go/internal/qerr"
+	"github.com/IoTPanic/quic-go/internal/utils"
+	"github.com/IoTPanic/quic-go/internal/wire"
 )
 
 type packer interface {

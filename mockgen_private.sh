@@ -17,7 +17,7 @@ for f in *.go; do
     continue;
   fi
   if $(egrep -qe "type (.*) interface" $f); then
-    AUX+=("github.com/lucas-clemente/quic-go=$f")
+    AUX+=("github.com/IoTPanic/quic-go=$f")
   fi
 done
 

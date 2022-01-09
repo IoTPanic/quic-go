@@ -8,8 +8,8 @@ import (
 	"context"
 	"sync"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/wire"
+	"github.com/IoTPanic/quic-go/internal/protocol"
+	"github.com/IoTPanic/quic-go/internal/wire"
 )
 
 // When a stream is deleted before it was accepted, we can't delete it from the map immediately.

@@ -7,9 +7,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/internal/handshake"
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/logging"
+	"github.com/IoTPanic/quic-go/internal/handshake"
+	"github.com/IoTPanic/quic-go/internal/protocol"
+	"github.com/IoTPanic/quic-go/logging"
 )
 
 // The StreamID is the ID of a QUIC stream.
@@ -283,7 +283,7 @@ type Config struct {
 	KeepAlive bool
 	// DisablePathMTUDiscovery disables Path MTU Discovery (RFC 8899).
 	// Packets will then be at most 1252 (IPv4) / 1232 (IPv6) bytes in size.
-	// Note that Path MTU discovery is always disabled on Windows, see https://github.com/lucas-clemente/quic-go/issues/3273.
+	// Note that Path MTU discovery is always disabled on Windows, see https://github.com/IoTPanic/quic-go/issues/3273.
 	DisablePathMTUDiscovery bool
 	// DisableVersionNegotiationPackets disables the sending of Version Negotiation packets.
 	// This can be useful if version information is exchanged out-of-band.

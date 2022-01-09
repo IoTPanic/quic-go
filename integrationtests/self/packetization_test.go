@@ -6,9 +6,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/lucas-clemente/quic-go"
-	quicproxy "github.com/lucas-clemente/quic-go/integrationtests/tools/proxy"
-	"github.com/lucas-clemente/quic-go/logging"
+	"github.com/IoTPanic/quic-go"
+	quicproxy "github.com/IoTPanic/quic-go/integrationtests/tools/proxy"
+	"github.com/IoTPanic/quic-go/logging"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

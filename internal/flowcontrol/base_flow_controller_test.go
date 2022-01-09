@@ -5,9 +5,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/internal/utils"
+	"github.com/IoTPanic/quic-go/internal/utils"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
+	"github.com/IoTPanic/quic-go/internal/protocol"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

@@ -8,8 +8,8 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	protocol "github.com/lucas-clemente/quic-go/internal/protocol"
-	wire "github.com/lucas-clemente/quic-go/internal/wire"
+	protocol "github.com/IoTPanic/quic-go/internal/protocol"
+	wire "github.com/IoTPanic/quic-go/internal/wire"
 )
 
 // MockHandshakeRunner is a mock of HandshakeRunner interface.

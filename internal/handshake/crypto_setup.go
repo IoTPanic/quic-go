@@ -10,13 +10,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/lucas-clemente/quic-go/internal/protocol"
-	"github.com/lucas-clemente/quic-go/internal/qerr"
-	"github.com/lucas-clemente/quic-go/internal/qtls"
-	"github.com/lucas-clemente/quic-go/internal/utils"
-	"github.com/lucas-clemente/quic-go/internal/wire"
-	"github.com/lucas-clemente/quic-go/logging"
-	"github.com/lucas-clemente/quic-go/quicvarint"
+	"github.com/IoTPanic/quic-go/internal/protocol"
+	"github.com/IoTPanic/quic-go/internal/qerr"
+	"github.com/IoTPanic/quic-go/internal/qtls"
+	"github.com/IoTPanic/quic-go/internal/utils"
+	"github.com/IoTPanic/quic-go/internal/wire"
+	"github.com/IoTPanic/quic-go/logging"
+	"github.com/IoTPanic/quic-go/quicvarint"
 )
 
 // TLS unexpected_message alert
