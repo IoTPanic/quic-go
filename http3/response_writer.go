@@ -22,7 +22,7 @@ type DataStreamer interface {
 	DataStream() quic.Stream
 }
 
-type responseWriter struct {
+type ResponseWriter struct {
 	stream         quic.Stream // needed for DataStream()
 	bufferedStream *bufio.Writer
 
@@ -35,13 +35,13 @@ type responseWriter struct {
 }
 
 var (
-	_ http.ResponseWriter = &responseWriter{}
-	_ http.Flusher        = &responseWriter{}
-	_ DataStreamer        = &responseWriter{}
+	_ http.ResponseWriter = &ResponseWriter{}
+	_ http.Flusher        = &ResponseWriter{}
+	_ DataStreamer        = &ResponseWriter{}
 )
 
-func newResponseWriter(stream quic.Stream, logger utils.Logger) *responseWriter {
-	return &responseWriter{
+func newResponseWriter(stream quic.Stream, logger utils.Logger) *ResponseWriter {
+	return &ResponseWriter{
 		header:         http.Header{},
 		stream:         stream,
 		bufferedStream: bufio.NewWriter(stream),
@@ -49,11 +49,11 @@ func newResponseWriter(stream quic.Stream, logger utils.Logger) *responseWriter 
 	}
 }
 
-func (w *responseWriter) Header() http.Header {
+func (w *ResponseWriter) Header() http.Header {
 	return w.header
 }
 
-func (w *responseWriter) WriteHeader(status int) {
+func (w *ResponseWriter) WriteHeader(status int) {
 	if w.headerWritten {
 		return
 	}
@@ -87,7 +87,7 @@ func (w *responseWriter) WriteHeader(status int) {
 	}
 }
 
-func (w *responseWriter) Write(p []byte) (int, error) {
+func (w *ResponseWriter) Write(p []byte) (int, error) {
 	if !w.headerWritten {
 		w.WriteHeader(200)
 	}
@@ -103,17 +103,17 @@ func (w *responseWriter) Write(p []byte) (int, error) {
 	return w.bufferedStream.Write(p)
 }
 
-func (w *responseWriter) Flush() {
+func (w *ResponseWriter) Flush() {
 	if err := w.bufferedStream.Flush(); err != nil {
 		w.logger.Errorf("could not flush to stream: %s", err.Error())
 	}
 }
 
-func (w *responseWriter) usedDataStream() bool {
+func (w *ResponseWriter) usedDataStream() bool {
 	return w.dataStreamUsed
 }
 
-func (w *responseWriter) DataStream() quic.Stream {
+func (w *ResponseWriter) DataStream() quic.Stream {
 	w.dataStreamUsed = true
 	w.Flush()
 	return w.stream
